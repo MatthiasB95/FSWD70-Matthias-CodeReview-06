@@ -96,22 +96,28 @@ arr[6] = new ClassEvent("Kris Kristofferson", "Vienna", "1150", "Roland Rainer P
 arr[7] = new ClassEvent("Lenny Kravitz", "Vienna", "1150", "Roland Rainer Platz 1", "kravitz.jpg", "Sat., 09.12.2019 - 19:30", "47,80 EUR", "http://www.lennykravitz.com/", "Wiener Stadthalle", "Halle D", "4.4.2004", "20:00");
 arr[8] = new ClassLocation("St. Charles Church", "Vienna", "1010", "Karlsplatz 1", "church.jpg", "1.1.2001", "11:00");
 arr[9] = new ClassLocation("Zoo Vienna", "Vienna", "1130", "Maxingstraße 13b", "zoo.jpg", "2.2.2002", "13:00");
-	//display the arr in the HTML file 
-	for (var i = 0; i < arr.length; i++) {
+	//display the arr in the HTML file
+	
+		for (var i = 0; i < arr.length; i++) {
 
-		loc.innerHTML += arr[i].display();
-	}
+			loc.innerHTML += arr[i].display();
+		}
+
+
+//creating a new array to sort by the time the pictures where taken
 
 arr.sort(sortbytime);
 
-function 
-sortbytime(a, b) {
+function sortbytime(a, b) {
     if (a[arr.length] === b[arr.length]) {
         return 0;
     }
     else {
-        return (a[1] < b[1]) ? -1 : 1;
-    }
+        return (a[arr.length] < b[arr.length]) ? -1 : 1;
+   }
 }
 
-btn.addEventListener("click", function(){sortbytime(arr.length, arr.length);},false);
+
+
+
+
